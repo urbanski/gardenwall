@@ -1,0 +1,17 @@
+version: "3"
+
+tasks:
+    build:
+        desc: Build the binary image
+        cmds:
+        - go build .
+    run:
+        desc: Run the binary
+        cmds:
+        - sudo ./gardenwall en0
+    build-mips:
+        desc: Build MIPS binary
+        cmds:
+        - echo GOOS=linux
+        - echo GOARCH=mips64
+        - go build -o bin/gardenwall-mips64
