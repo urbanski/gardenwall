@@ -4,11 +4,11 @@ tasks:
     build:
         desc: Build the binary image
         cmds:
-        - go build .
+        - go build -o bin/gardenwall
     run:
         desc: Run the binary
         cmds:
-        - sudo ./gardenwall en0
+        - sudo ./bin/gardenwall en0
     build-mips:
         desc: Build MIPS binary
         cmds:
